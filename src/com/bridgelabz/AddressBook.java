@@ -86,6 +86,44 @@ public class AddressBook {
 	        public void setEmail(String email) {
 	            this.email = email;
 	        }
+	        /**
+	         * This method will display the data of the addressbook.
+	         */
+	        public void editContact() {
+	            Scanner sc = new Scanner(System.in);
+	            System.out.println("Edit Firstname : ");
+	            String firstname = sc.nextLine();
+	            setFirstName(firstname);
+
+	            System.out.println("Edit Lastname : ");
+	            String lastname = sc.nextLine();
+	            setLastName(lastname);
+
+	            System.out.println("Edit Address : ");
+	            String address = sc.nextLine();
+	            setAddress(address);
+
+	            System.out.println("Edit City : ");
+	            String city = sc.nextLine();
+	            setCity(city);
+
+	            System.out.println("Edit State : ");
+	            String state = sc.nextLine();
+	            setState(state);
+
+	            System.out.println("Edit Zip : ");
+	            int zip = sc.nextInt();
+	            setZip(zip);
+
+	            System.out.println("Edit PhoneNumber : ");
+	            long phonenumber = sc.nextLong();
+	            sc.nextLine();
+	            setPhoneNo(phonenumber);
+
+	            System.out.println("Edit Email : ");
+	            String email = sc.nextLine();
+	            setEmail(email);
+	        }
+	        }
 	    
-	    }
 
