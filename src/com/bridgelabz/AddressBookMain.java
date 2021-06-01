@@ -53,7 +53,7 @@ public class AddressBookMain {
 				addressObject.editContact(nameToEdit);
 				break;
 			case 3:
-				System.out.println("Enter name of contact to edit : ");
+				System.out.println("Enter name of contact to delete : ");
 				String deleteCon = scan.nextLine();
 				addressObject.delete(deleteCon);
 				break;
