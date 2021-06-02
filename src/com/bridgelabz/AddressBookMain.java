@@ -24,7 +24,7 @@ public class AddressBookMain {
 				break;
 			case 2:
 				System.out.println("Enter name of contact to edit : ");
-				String nameToEdit = scan.nextLine();
+				String nameToEdit =scan.nextLine();
 				addressObject.editContact(nameToEdit);
 				break;
 			case 3:
