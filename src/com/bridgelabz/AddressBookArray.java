@@ -61,8 +61,9 @@ public class AddressBookArray {
     public void delete(String nameToDelete) {
         int i=0;
         for(i=0;i<contactList.size();i++) {
-            if(contactList.get(i).firstname.equals(nameToDelete)) {
-                contactList.remove(i);
+            if(contactList.get(i).getFirstName.equals(nameToDelete)) {
+                AddressBook contact=contactList.get(i);
+                contactList.remove(contact);
                 System.out.println("Contact is Deleted");
             }
             else {
