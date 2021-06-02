@@ -58,11 +58,12 @@ public class AddressBookArray {
      * Here i have added delete method which will delete the data comparing to the firstname.
      * nameToDelete
      */
-    public void delete(String nameToDelete) {
+public void delete(String nameToDelete) {
         int i=0;
         for(i=0;i<contactList.size();i++) {
-            if(contactList.get(i).firstname.equals(nameToDelete)) {
-                contactList.remove(i);
+            if(contactList.get(i).getFirstName.equals(nameToDelete)) {
+                AddressBook contact=contactList.get(i);
+                contactList.remove(contact);
                 System.out.println("Contact is Deleted");
             }
             else {
@@ -70,6 +71,14 @@ public class AddressBookArray {
             }
         }
     }
+    public void addMultipleContact() {
+        	 
+             System.out.println("Enter a person Name:");
+             String firstName = sc.nextLine();
+             for(int i = 0; i <  contactList.size(); i++) {
+                  AddressBook contact=contactList.get(i);
+        	
+		}
 
     /**
      * This printContactDetails will print all the information after data got edited.
