@@ -33,7 +33,7 @@ public class AddressBookMain {
 				break;
 		        case 4:
 				System.out.println("Contact List : ");
-				addressObject. addMultipleContact();
+				addressObject.addMultipleContact();
 				break;	
 			case 5:
 				System.out.println("Contact List : ");
