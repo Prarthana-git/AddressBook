@@ -13,14 +13,13 @@ public class AddressBookMain {
 			int switchChoice = scan.nextInt();
 			scan.nextLine();
 			/**
-			 * i have taken 4 options in this switch case According to value it'll call the
+			 * i have taken 5 options in this switch case According to value it'll call the
 			 * method. Case 1 will add new contact data. Case2 will edit the contact. Case3
-			 * will delete the contact data. Case4 will print all the data of that
+			 * will delete the contact data. case4 to add multiple contacts.Case5 will print all the data of that
 			 * Arraylist. Case5 will exit from this loop.
 			 */
 			switch (switchChoice) {
-			case 1:
-				
+			case 1:addressObject.add();
 				break;
 			case 2:
 				System.out.println("Enter name of contact to edit : ");
