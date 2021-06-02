@@ -9,7 +9,7 @@ public class AddressBookMain {
 		String choice = "y";
 		System.out.println("Welcome to Address Book Program!");
 		while (true) {
-			System.out.println("Enter 1: add 2: edit 3: delete 4: view 5: exit");
+			System.out.println("Enter 1: add 2: edit 3: delete 4:Multiple Contact 5:view 6:Exit");
 			System.out.println("Enter choice : ");
 			int switchChoice = scan.nextInt();
 			scan.nextLine();
@@ -57,7 +57,11 @@ public class AddressBookMain {
 				String deleteCon = scan.nextLine();
 				addressObject.delete(deleteCon);
 				break;
-			case 4:
+		        case 4:
+				System.out.println("Contact List : ");
+				addressObject. addMultipleContact();
+				break;	
+			case 5:
 				System.out.println("Contact List : ");
 				addressObject.printContactDetails();
 				break;
