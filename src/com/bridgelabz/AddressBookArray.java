@@ -9,7 +9,29 @@ public class AddressBookArray {
 
         contactList.add(contactDetailObject);
     }
-
+     public void add()
+	 {
+		System.out.println("Firstname : ");
+	        String firstname = scan.nextLine();
+        	System.out.println("Lastname : ");
+	        String lastname = scan.nextLine();
+		System.out.println("Address : ");
+		String address = scan.nextLine();
+		System.out.println("City : ");
+		String city = scan.nextLine();
+		System.out.println("State : ");
+		String state = scan.nextLine();
+		System.out.println("Zip : ");
+		int zip = scan.nextInt();
+		System.out.println("PhoneNumber : ");
+		long phonenumber = scan.nextLong();
+		System.out.println("Email : ");
+		scan.nextLine();
+		String email = scan.nextLine();
+		AddressBook contact = new AddressBook(firstname, lastname, address, city, state, zip, phonenumber,
+							email);
+		addressObject.insertContact(contact);
+	}
     /**
      * This Editcontact method will take the firstname as a parameter and according to that it will edit the data.
      * nameToEdit
