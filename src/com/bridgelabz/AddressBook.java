@@ -88,6 +88,7 @@ public class AddressBook {
 	        }
 	        /**
 	         * This method will display the data of the addressbook.
+	         * nameToEdit1 
 	         */
 	        public void editContact() {
 	            Scanner sc = new Scanner(System.in);
@@ -124,6 +125,8 @@ public class AddressBook {
 	            String email = sc.nextLine();
 	            setEmail(email);
 	        }
+
+			
 	        }
 	    
 
