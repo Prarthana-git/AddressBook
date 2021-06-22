@@ -13,8 +13,12 @@ public class AddressbookMain {
 		 * According to the options it'll call the method.
 		 */
 		while(result) {
-			System.out.println("Enter option to make changes : \n[press 1 to add new Contact" +
-					"\n press 2 to Edit existing contacts" +"\n press 3 to delete a contact detail " + "\n press 0 to quit ]");
+			System.out.println("Enter option to make changes : \n[*press 1 to add new Contact."
+					+"\n*press 2 to Edit existing contacts."
+					+"\n*press 3 to delete a contact detail."
+					+"\n*press 4 to search by city."
+					+"\n*press 5 to search by State."
+					+ "\n*press 0 to quit ]");
 			int option = input.nextInt();
 			switch (option) {
 				case 1 :
@@ -30,6 +34,16 @@ public class AddressbookMain {
 					String firstName = input.next();
 					addressBook.deleteContact(firstName);
 					break;
+				case 4:
+					System.out.println("Enter your City name to search Person details: ");
+					String city=input.next();
+					addressBook.searchPersonByCity(city);
+					break;
+				case 5:
+					System.out.println("Enter your State name to search person details: ");
+					String state=input.next();
+					addressBook.searchPersonByState(state);
+					break;
 				default:
 					result = false;
 			}
@@ -41,8 +55,8 @@ public class AddressbookMain {
 		 * Here i have created an object of Address book class with the parameters
 		 * it will assign inside the constructor and initialised too.
 		 */
-		AddressBook addressBook = new AddressBook("Santosh", "Panda", "Bhubaneswar",
-				"Bhubaneswar", "Odisha", 751011, 797871556,"santospanda111@gmail.com");
+		AddressBook addressBook = new AddressBook("Prarthana", "Chaudhari", "Mumbai",
+				"Mumbai", "Maharashtra", 256321,452133654,"prarthanachaudhari@gmail.com");
 		addressBook.printContactDetails();
 		/**
 		 * Here i have created one object of Addressbookmain class named main.
@@ -51,4 +65,3 @@ public class AddressbookMain {
 		AddressbookMain main = new AddressbookMain();
 		main.choice();
 	}
-}
