@@ -1,10 +1,10 @@
-
 public class AddressBookImplement implements MultipleAddressBook {
 	public Map<String, ArrayList<AddressBook>> book;
 	public Map<String, ArrayList<AddressBook>> multibook;
 	public Map<String, ArrayList<AddressBook>> city;
 	public Map<String, ArrayList<AddressBook>> state;
 	public ArrayList<AddressBook> entries;
+	public int count = 0;
 	Scanner obj = new Scanner(System.in);
 	/**
 	 * this constructor will create hashmaps and arraylist for datas.
@@ -17,14 +17,15 @@ public class AddressBookImplement implements MultipleAddressBook {
 		entries = new ArrayList<>();
 	}
 	@Override
-	public void addAddressBook(String BookName, String FirstName, String LastName, String Address, String City, int Zip,
-							   String State, long PhoneNumber, String Email) {
-		AddressBook adder = new AddressBook(BookName, FirstName, LastName, Address, City, Zip, State, PhoneNumber, Email);
+	public void addAddressBook(String bookName,String firstName,String lastName,String address,String city,int zip,String state,long phoneNumber,String email)
+	{
+		AddressBook adder=new AddressBook(bookName,firstName,lastName,address,city,zip,state,phoneNumber,email);
 		entries.add(adder);
-		book.put(FirstName, entries);
-		multibook.put(BookName, entries);
-		city.put(City, entries);
-		state.put(State, entries);
+		book.put(firstName,adder);
+		multibook.put(bookName,entries);
+		this.city.put(city,entries);
+		this.state.put(state,entries);
+		count++;
 	}
 	/**
 	 * This method takes console arguments.
@@ -90,7 +91,7 @@ public class AddressBookImplement implements MultipleAddressBook {
 						case 2:
 							System.out.println("Enter your last name");
 							String lastname = obj.next();
-							details.FirstName = lastname;
+							details.lastName = lastname;
 							System.out.println(book);
 							break;
 						case 3:
@@ -155,7 +156,7 @@ public class AddressBookImplement implements MultipleAddressBook {
 	 */
 	public boolean makechoice() {
 		System.out.println("enter \n1:add_contact \n2:view_by_city \n3:view_by_state \n4:edit_contact \n5:delete_contact" +
-				" \n6:person_by_city_or_state \n0: Quit");
+				" \n6:person_by_city_or_state \n7:Get_NoOfContacts \n0: Quit");
 		int check = obj.nextInt();
 		boolean conditon = true;
 		switch (check) {
@@ -176,6 +177,9 @@ public class AddressBookImplement implements MultipleAddressBook {
 				break;
 			case 6:
 				getContactByCityOrState();
+				break;
+			case 7:
+				getCountOfPersons();
 				break;
 			case 0:
 				conditon = false;
@@ -230,5 +234,11 @@ public class AddressBookImplement implements MultipleAddressBook {
 			}
 		}
 		if (flag == 1) System.out.println("no records found");
+	}
+	/**
+	 * this method will print the No of contacts.
+	 */
+	private void getCountOfPersons() {
+		System.out.println("total count is " + count);
 	}
 }
