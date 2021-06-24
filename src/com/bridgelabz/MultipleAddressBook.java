@@ -1,62 +1,51 @@
-/**
- * this is an interface where i have added the required methods.
- */
-public interface MultipleAddressBook {
-    public void addAddressBook(String BookName, String FirstName, String LastName, String Address, String City,
-                               int Zip, String State, long PhoneNumber, String Email);
-    public void getContact();
-    boolean equals(String firstName);
-    public void editContact();
-    public void deleteEntry();
-    public boolean makechoice();
-}
-public class AddressBook {
-    public String BookName;
-    public String FirstName;
-    public String LastName;
-    public String Address;
-    public String City;
-    public int Zip;
-    public String State;
-    public long PhoneNumber;
-    public String Email;
-    /**
-     * This is a parameterized constructor having the given parameters.
-     * @param BookName
-     * @param FirstName
-     * @param LastName
-     * @param Address
-     * @param City
-     * @param Zip
-     * @param State
-     * @param PhoneNumber
-     * @param Email
-     */
-    public AddressBook(String BookName, String FirstName, String LastName, String Address, String City, int Zip,
-                       String State, long PhoneNumber, String Email) {
-        this.BookName = BookName;
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Address = Address;
-        this.City = City;
-        this.Zip = Zip;
-        this.State = State;
-        this.PhoneNumber = PhoneNumber;
-        this.Email = Email;
-    }
-    /**
-     * this constructor will work if we'll not pass any parameters.
-     */
-    public AddressBook(){
 
+interface MultipleAddressBook {
+
+    public void addAddressBook(String bookName, String firstName, String lastName, String address, String city, int zip,
+                               String state, long phoneNumber, String email);
+
+    public void getContact();
+
+    boolean equals(String firstName);
+
+    public void editContact();
+
+    public void deleteEntry();
+
+    public boolean makeChoice();
+
+}
+
+class AddressBook {
+    public String bookName;
+    public String firstName;
+    public String lastName;
+    public String address;
+    public String city;
+    public int zip;
+    public String state;
+    public long phoneNumber;
+    public String email;
+
+    public AddressBook(String bookName, String firstName, String lastName, String address, String city, int zip,
+                       String state, long phoneNumber, String email) {
+        this.bookName = bookName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.zip = zip;
+        this.state = state;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
-    /**
-     * this method will return all initialised values.
-     * @return string.
-     */
+
+    public AddressBook() {
+    }
+
     @Override
     public String toString() {
-        return BookName + " " + FirstName + " " + LastName + " " + Address + " " + City + " " + Zip + " " + State + " "
-                + PhoneNumber + " " + Email;
+        return bookName + " " + firstName + " " + lastName + " " + address + " " + city + " " + zip + " " + state + " "
+                + phoneNumber + " " + email;
     }
 }
