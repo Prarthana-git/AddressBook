@@ -27,8 +27,7 @@ class AddressBook {
     public long phoneNumber;
     public String email;
 
-    public AddressBook(String bookName, String firstName, String lastName, String address, String city, int zip,
-                       String state, long phoneNumber, String email) {
+    public AddressBook(String bookName, String firstName, String lastName, String address, String city, int zip, String state, long phoneNumber, String email) {
         this.bookName = bookName;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,12 +39,91 @@ class AddressBook {
         this.email = email;
     }
 
-    public AddressBook() {
+    public String getBookName() {
+        return bookName;
     }
 
-    @Override
-    public String toString() {
-        return bookName + " " + firstName + " " + lastName + " " + address + " " + city + " " + zip + " " + state + " "
-                + phoneNumber + " " + email;
+    public String getFirstName() {
+        return firstName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "AddressBook{" +
+                "bookName='" + bookName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", zip=" + zip +
+                ", state='" + state + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
 }
